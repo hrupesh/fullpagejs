@@ -15,10 +15,24 @@
   <body>
     <div id="fullpage">
       <div class="section s1">
-        <h1>Section One  </h1>
+        <h1>Section One</h1>
       </div>
       <div class="section s2">
-        <h1>Section Two</h1>
+        <div class="slide">
+          <h1>Slide One</h1>
+        </div>
+
+        <div class="slide">
+          <h1>Slide Two</h1>
+        </div>
+
+        <div class="slide">
+          <h1>Slide Three</h1>
+        </div>
+
+        <div class="slide">
+          <h1>Slide Four</h1>
+        </div>
       </div>
       <div class="section s3">
         <h1>Section Three</h1>
@@ -33,13 +47,49 @@
       integrity="sha256-wypDCQw+qwWtdARZAAtUMv/1SWOEB1XHZwAFoNc9Wn8="
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.extensions.min.js"
+      integrity="sha256-pwVO9xs/zTEUDEzK1G4AbAAZbAzmU30SniNu2b9O0UY="
+      crossorigin="anonymous"
+    ></script>
     <script>
       new fullpage("#fullpage", {
         autoscroll: true,
         scrollHorizontally: true,
         navigation: true,
-        anchors: ['section1','section2','section3','section4'],
-        navigationTooltips: ['One','Two','Three','Four'],
+        anchors: ["section1", "section2", "section3", "section4"],
+        navigationTooltips: ["One", "Two", "Three", "Four"],
+        scrollingSpeed: 1200,
+        controlArrows: false,
+        slidesNavigation: true,
+        lockAnchors: true,
+        slidesNavPosition: "top",
+        scrollBar: false,
+        loopBottom: true,
+        loopTop: true,
+        loopHorizontal: true,
+        continuousHorizontal: true,
+        scrollHorizontally: true,
+        interlockedSlides: true,
+        dragAndMove: true,
+        offsetSections: true,
+        resetSliders: true,
+        fadingEffect: true,
+        touchSensitivity: 20,
+        responsiveSlides: true,
+        parallax: true,
+        parallaxOptions: {
+          type: "reveal",
+          percentage: 40,
+          property: "translate",
+        },
+        cards: true,
+        cardsOptions: {
+          perspective: 100,
+          fadeContent: true,
+          fadeBackground: true,
+        },
+        lazyLoading: true,
       });
     </script>
   </body>
